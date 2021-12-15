@@ -10,18 +10,18 @@ class Note extends Component {
     const { note } = this.props;
     this.props.deleteNote(note.id);
   };
-  onUpperCaseClick = () => {
-    const { note } = this.props;
-    this.props.updateNote(note.id, {
-      content: note.content.toUpperCase()
-    });
-  };
-  onLowerCaseClick = () => {
-    const { note } = this.props;
-    this.props.updateNote(note.id, {
-      content: note.content.toLowerCase()
-    });
-  };
+  // onUpperCaseClick = () => {
+  //   const { note } = this.props;
+  //   this.props.updateNote(note.id, {
+  //     content: note.content.toUpperCase()
+  //   });
+  // };
+  // onLowerCaseClick = () => {
+  //   const { note } = this.props;
+  //   this.props.updateNote(note.id, {
+  //     content: note.content.toLowerCase()
+  //   });
+  // };
   render() {
     const { note } = this.props;
     return (
@@ -30,12 +30,12 @@ class Note extends Component {
         <p>
           (id:{note.id}) {note.content}
         </p>
-        <Button variant="secondary" size="sm" onClick={this.onUpperCaseClick}>
+        {/* <Button variant="secondary" size="sm" onClick={this.onUpperCaseClick}>
           Upper case
         </Button>{" "}
         <Button variant="info" size="sm" onClick={this.onLowerCaseClick}>
           Lower case
-        </Button>{" "}
+        </Button>{" "} */}
         <Button variant="danger" size="sm" onClick={this.onDeleteClick}>
           Delete
         </Button>

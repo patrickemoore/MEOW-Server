@@ -11,6 +11,7 @@ import ResetPassword from "./components/account/ResetPassword";
 import ResetPasswordConfirm from "./components/account/ResetPasswordConfirm";
 
 import Dashboard from "./components/dashboard/Dashboard";
+import TutorDashboard from "./components/tutor-marking/TutorDashboard";
 
 import requireAuth from "./utils/RequireAuth";
 
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
             <Route path="/dashboard" component={requireAuth(Dashboard)} />
+            <Route path="/tutor_dashboard" component={requireAuth(TutorDashboard)} />
             <Route exact path="/" component={Home} />
             <Route path="/resend_activation" component={ResendActivation} />
             <Route path="/activate/:uid/:token" component={ActivateAccount} />

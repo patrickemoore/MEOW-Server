@@ -9,7 +9,8 @@ class AddNote extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: ""
+      content: "",
+      outcome: ""
     };
   }
   onChange = e => {
@@ -18,7 +19,8 @@ class AddNote extends Component {
 
   onAddClick = () => {
     const note = {
-      content: this.state.content
+      content: this.state.content,
+      outcome: this.state.outcome
     };
     this.props.addNote(note);
   };
